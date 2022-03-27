@@ -1,49 +1,54 @@
 {
-  "users": [
+  "clients": [
     {
-      "id": 1,
-      "nome": "Ana Torre",
-      "ativo": true,
-      "email": "a@a.com",
-      "role": 1
+      "name": "Gabi",
+      "active": true,
+      "product": "ESTUDANTE",
+      "role": 1,
+      "id": 1
     },
     {
+      "name": "Ana Julia",
+      "active": true,
+      "product": "ESTUDANTE",
       "id": 2,
-      "nome": "Gabriel Costa",
-      "ativo": true,
-      "email": "g@g.com",
-      "role": 1
+      "role": 1,
+      "createdAt": "2022-03-27T19:16:07.890Z"
     },
     {
+      "name": "Ana Julia",
+      "active": true,
+      "product": "ESTUDANTE",
       "id": 3,
-      "nome": "Flavia Lins",
-      "ativo": true,
-      "email": "f@f.com",
-      "role": 1
+      "role": 1,
+      "createdAt": "2022-03-27T19:31:32.648Z"
     },
     {
+      "name": "Ana Julia",
+      "active": true,
+      "product": "DOCENTE",
       "id": 4,
-      "nome": "Carlos Marques",
-      "ativo": true,
-      "email": "c@c.com",
-      "role": 2
+      "role": 2,
+      "createdAt": "2022-03-27T19:32:49.364Z"
     },
     {
+      "name": "Ana Julia",
+      "active": true,
+      "product": "DOCENTE",
       "id": 5,
-      "nome": "Silvia Souza",
-      "ativo": true,
-      "email": "s@s.com",
-      "role": 2
+      "role": 2,
+      "createdAt": "2022-03-27T19:38:28.037Z"
     },
     {
+      "name": "Ana Julia",
+      "active": true,
+      "product": "DOCENTE",
       "id": 6,
-      "nome": "Marcia Silva",
-      "ativo": true,
-      "email": "m@m.com",
-      "role": 2
+      "role": 2,
+      "createdAt": "2022-03-27T20:06:50.428Z"
     }
   ],
-  "roles": [
+  "products": [
     {
       "id": 1,
       "type": "ESTUDANTE"

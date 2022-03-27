@@ -1,0 +1,56 @@
+const { gql } = require('apollo-server')
+
+const clientSchema = gql `
+  scalar DateTime
+  enum ProductTypes{
+    ESTUDANTE
+    DOCENTE
+    COORDENACAO
+  }
+  input ClientInput {
+    name: String
+    active:Boolean
+    address: String
+    product:ProductTypes
+    createdAt:DateTime
+  }
+  type Client {
+    id: ID
+    name: String
+    active:Boolean!
+    address: String
+    product:Product
+    createdAt:DateTime
+  }
+  type Product {
+    id:ID
+    type: ProductTypes!
+  }
+  type Query{
+    clients:[Client]
+    client(id:ID!):Client
+  }
+
+  type Mutation{
+    addClient(client:ClientInput):Client!
+    updateClient(id:ID!,client:ClientInput):updateClientResponse!
+    deleteClient(id:ID!):deleteClientResponse
+  }
+  interface ResponseCustom{
+    code:Int!
+    message:String!
+  }
+  type deleteClientResponse implements ResponseCustom{
+    code:Int!
+    message:String!
+  }
+  type updateClientResponse implements ResponseCustom{
+    code:Int!
+    message:String!
+    client:Client
+  }
+`
+
+module.exports= clientSchema;
+
+

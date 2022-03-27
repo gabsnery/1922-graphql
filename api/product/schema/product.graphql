@@ -1,0 +1,13 @@
+const { gql } = require('apollo-server')
+
+const productSchema = gql `
+  type Product {
+    name: String!
+    address: String!
+    active:Boolean!
+  }
+`
+
+module.exports= productSchema;
+
+
