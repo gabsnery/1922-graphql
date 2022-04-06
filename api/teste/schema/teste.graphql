@@ -1,0 +1,19 @@
+const { gql } = require('apollo-server')
+
+const testeSchema = gql `
+  scalar DateTime
+
+  type Teste {
+    id: ID!
+    description: String
+    type: String
+    createdAt:DateTime
+  }
+
+  type Query{
+    entries:[Teste]
+    Entry(id:ID!):Teste
+  }
+`
+
+module.exports= testeSchema;
